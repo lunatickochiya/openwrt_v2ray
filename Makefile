@@ -297,6 +297,8 @@ endif
 ifneq ($(CONFIG_V2RAY_EXCLUDE_ASSETS),y)
 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/release/config/{geoip,geosite}.dat $(1)/usr/bin/
 endif
+
+	cp $(GO_PKG_BUILD_BIN_DIR)/v2ray $(TOPDIR)/bin
 endef
 
 ifneq ($(CONFIG_V2RAY_EXCLUDE_ASSETS),y)
