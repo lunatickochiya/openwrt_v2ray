@@ -2,11 +2,8 @@ name: build-mips-24kc
 
 on:
   push:
-    branches:
-      - '**'
-    tags-ignore:
+    tags:
       - '*'
-  pull_request:
 
 env:
   PACKAGE_NAME: v2ray-core
