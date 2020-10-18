@@ -168,7 +168,7 @@ jobs:
           find "${{ github.workspace }}" -type f -name "*.ipk" -exec ls -lh {} \;
           find "${{ github.workspace }}" -type f -name "v2ray" -exec ls -lh {} \;
           cd "$SDK_HOME"
-          ../after_build.sh
+          ./after_build.sh
 
       - name: Upload sysupgrade directory
         uses: actions/upload-artifact@master
