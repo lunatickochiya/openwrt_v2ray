@@ -172,7 +172,7 @@ jobs:
 
       - name: Upload sysupgrade directory
         uses: actions/upload-artifact@master
-          with:
+        with:
           name: OpenWrt_sysupgrade
           path: "$SDK_HOME"/out
 
