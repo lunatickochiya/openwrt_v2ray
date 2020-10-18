@@ -179,7 +179,7 @@ jobs:
       - name: Release and Upload Assets
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.tag.outputs.release_tag }}
+          tag_name: release
           files: '*.ipk v2ray'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
