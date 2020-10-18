@@ -167,6 +167,10 @@ jobs:
 
           find "${{ github.workspace }}" -type f -name "*.ipk" -exec ls -lh {} \;
           find "${{ github.workspace }}" -type f -name "v2ray" -exec ls -lh {} \;
+          
+    - name: After Build
+      id: afb
+      run: |
           cd "$SDK_HOME"
           ../after_build.sh
 
