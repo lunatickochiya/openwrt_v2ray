@@ -167,26 +167,14 @@ jobs:
 
           find "${{ github.workspace }}" -type f -name "*.ipk" -exec ls -lh {} \;
           find "${{ github.workspace }}" -type f -name "v2ray" -exec ls -lh {} \;
-          
-    - name: After Build
-      id: afb
-      run: |
           cd "$SDK_HOME"
           ../after_build.sh
 
-    - name: Upload sysupgrade directory
-      uses: actions/upload-artifact@master
-      with:
-        name: OpenWrt_sysupgrade
-        path: "$SDK_HOME"/out
-        
-    - name: Generate release tag
-      id: tag
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
-        touch release.txt
-        echo "::set-output name=status::success" 
+      - name: Upload sysupgrade directory
+        uses: actions/upload-artifact@master
+          with:
+          name: OpenWrt_sysupgrade
+          path: "$SDK_HOME"/out
 
       - name: Release and Upload Assets
         uses: softprops/action-gh-release@v1
