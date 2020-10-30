@@ -18,11 +18,11 @@ jobs:
       matrix:
         include:
           - arch: linux-mips
-            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/ath79/generic
+            sdk_url_path: https://downloads.openwrt.org/releases/19.07.3/targets/ath79/generic
             sdk_name: -sdk-ath79-generic_
 
           - arch: linux-mipsle
-            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/ramips/mt7620
+            sdk_url_path: https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7620
             sdk_name: -sdk-ramips-mt7620_
 
           # - arch: arc_arc700
